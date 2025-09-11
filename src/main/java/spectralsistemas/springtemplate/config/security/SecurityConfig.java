@@ -26,9 +26,11 @@ public class SecurityConfig {
    */
   public static final List<String> ALLOWED_URLS = List.of( //
       "/h2-console/**", //
-      "/swagger-ui/**", //
-      "/api/public/**" //
-      // Adicione outras URLs públicas aqui
+      "/actuator/health/**", //
+      "/actuator/info/**", //
+      "/actuator/readiness/**", //
+      "/actuator/liveness/**" //
+      // ...outras URLs
   );
 
   /**

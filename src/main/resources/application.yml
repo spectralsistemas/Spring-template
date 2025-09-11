@@ -3,3 +3,39 @@ spring:
     active: hk # Define o profile padrão como 'hk'
   application:
     name: Spring-template
+
+  datasource:
+    hikari:
+      # maximum-pool-size: 10 # Tamanho máximo do pool de conexões
+      # connection-timeout: 30000 # Timeout de conexão em ms
+
+  jpa: # Exemplo de configurações JPA/Hibernate parametrizáveis (remova o comentário para usar)
+    hibernate:
+      ddl-auto: update # Opções: none, validate, update, create, create-drop
+    show-sql: true # Exibe SQL gerado no console
+    properties:
+      hibernate:
+        format_sql: true # Formata o SQL para facilitar leitura
+        # use_sql_comments: true # Adiciona comentários nos SQLs gerados
+        # default_batch_fetch_size: 16 # Tamanho padrão de batch para fetch
+        # jdbc.batch_size: 20 # Tamanho de batch para inserts/updates
+        # order_inserts: true # Ordena inserts para otimizar performance
+        # order_updates: true # Ordena updates para otimizar performance
+        # generate_statistics: true # Gera estatísticas do Hibernate
+        # cache.use_second_level_cache: true # Ativa cache de segundo nível
+        # cache.use_query_cache: true # Ativa cache de queries
+        # cache.region.factory_class: org.hibernate.cache.jcache.JCacheRegionFactory # Exemplo de configuração de cache
+        # jdbc:
+        #   time_zone: UTC # Define timezone do JDBC
+    # open-in-view: false # Recomenda-se desabilitar em produção
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,readiness,liveness # Inclui endpoints principais
+  endpoint:
+    health:
+      show-details: always # Exibe detalhes do health check
+      probes:
+        enabled: true # Ativa readiness/liveness probes
