@@ -1,0 +1,36 @@
+MIT License
+
+Copyright (c) 2025 Spectral Sistemas
+# Spring-template
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Assinatura: Spectral Sistemas
+
+Este repositório é um template para projetos futuros da Spectral Sistemas.
+
+## Objetivo
+
+Fornecer uma base de desenvolvimento com exemplos de uso das principais bibliotecas do ecossistema Spring, incluindo boas práticas e simulações de funcionalidades.
+
+## Tecnologias e Bibliotecas
+- Spring Boot
+- Lombok
+- Spring Web
+- Spring Security
+- Spring Data JPA
+- Spring Actuator
+- Spring Validation
+- H2 Database
+- PostgreSQL
+- MongoDB Spring Data
+- Spring Batch
+- Resilience4j
+
+## Aviso Legal
+Este projeto é fornecido "como está". Qualquer pessoa pode utilizar este repositório como base, porém o uso é por conta e risco do usuário. A Spectral Sistemas não se responsabiliza por quaisquer danos, perdas ou punições decorrentes do uso deste template.
+
+## Assinatura
+Todas as assinaturas e direitos reservados à empresa Spectral Sistemas.
+
