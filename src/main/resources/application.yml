@@ -1,4 +1,5 @@
 spring:
+  profiles:
+    active: hk # Define o profile padrão como 'hk'
   application:
     name: Spring-template
-
