@@ -6,8 +6,8 @@ spring:
 
   datasource:
     hikari:
-      # maximum-pool-size: 10 # Tamanho máximo do pool de conexões
-      # connection-timeout: 30000 # Timeout de conexão em ms
+    # maximum-pool-size: 10 # Tamanho máximo do pool de conexões
+    # connection-timeout: 30000 # Timeout de conexão em ms
 
   jpa: # Exemplo de configurações JPA/Hibernate parametrizáveis (remova o comentário para usar)
     hibernate:
@@ -39,3 +39,19 @@ management:
       show-details: always # Exibe detalhes do health check
       probes:
         enabled: true # Ativa readiness/liveness probes
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      exampleCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 4
+        minimumNumberOfCalls: 2
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+  ratelimiter:
+    instances:
+      exampleRL:
+        limitForPeriod: 2 # Número de requisições permitidas por período
+        limitRefreshPeriod: 10s # Período de renovação do limite
+        timeoutDuration: 0 # Tempo máximo de espera por permissão

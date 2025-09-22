@@ -1,5 +1,6 @@
 package spectralsistemas.springtemplate.controller;
 
+import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import spectralsistemas.springtemplate.model.SpectralExample;
+import spectralsistemas.springtemplate.model.dto.SpectralExampleDTO;
 import spectralsistemas.springtemplate.service.SpectralExampleService;
 
 /**
@@ -69,5 +71,15 @@ public class SpectralExampleController {
       return ResponseEntity.noContent().build();
     }
     return ResponseEntity.notFound().build();
+  }
+
+  /**
+   * Cria novo exemplo com validação
+   */
+  @PostMapping("/validated")
+  public ResponseEntity<SpectralExample> criarValidado(@Valid @RequestBody SpectralExampleDTO dto) {
+    SpectralExample exemplo = SpectralExample.builder().nome(dto.nome).dataCriacao(dto.dataCriacao).ativo(dto.ativo)
+        .build();
+    return ResponseEntity.ok(service.salvar(exemplo));
   }
 }
